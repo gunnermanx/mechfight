@@ -21,9 +21,10 @@ public class Battlefield : MonoBehaviour {
 
 	public void Initialize( List<UnitSerializedData> team1UnitsData, List<UnitSerializedData> team2UnitsData ) {
 
+#if DEBUG
 		Debug.Assert( team1UnitsData.Count <=_team1Slots.Count, "Num of team1 unit data exceeds num of battlefield slots, use another battlefield!" );
 		Debug.Assert( team2UnitsData.Count <=_team2Slots.Count, "Num of team2 unit data exceeds num of battlefield slots, use another battlefield!" );
-
+#endif
 		for ( int i = 0, count = team1UnitsData.Count; i < count; i++ ){
 			_team1Units.Add( _team1Slots[ i ].attachedUnit );
 			_team1Units[ i ].InitializeUnit( team1UnitsData[ i ] );

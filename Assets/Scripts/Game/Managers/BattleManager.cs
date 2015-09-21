@@ -121,7 +121,9 @@ public class BattleManager : MonoBehaviour {
 				_aiConductor.GetConductorInput( unitToMove );
 			} 
 			else {
+#if DEBUG
 				Debug.Assert( false, "Unit not in any team?" );
+#endif
 			}
 
 			// Keep yielding until the conductor has finished the current turn

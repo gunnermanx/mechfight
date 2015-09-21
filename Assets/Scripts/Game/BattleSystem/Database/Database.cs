@@ -25,9 +25,9 @@ public class Database : MonoBehaviour {
 			path = SKILLDATA_PATH + pilotId + SKILLS_FOLDER + id;
 			data = Resources.Load( path ) as SkillData;
 		}
-		
+#if DEBUG		
 		Debug.Assert( data != null, "No SkillData found with id " + id + " at path " + path );
-		
+#endif
 		return data;
 	}
 
@@ -38,8 +38,9 @@ public class Database : MonoBehaviour {
 			path = MECHPARTDATA_PATH + id;
 			data = Resources.Load( MECHPARTDATA_PATH + id ) as MechPartData;
 		}
-		
+#if DEBUG		
 		Debug.Assert( data != null, "No MechPartData found with id " + id + " at path " + path  );	
+#endif
 		return data;
 	}
 
@@ -51,8 +52,9 @@ public class Database : MonoBehaviour {
 			path = PILOTDATA_PATH + id + "/" + id;
 			data = Resources.Load( path ) as PilotData;
 		}
-		
+#if DEBUG		
 		Debug.Assert( data != null, "No PilotData found with id " + id + " at path " + path  );	
+#endif
 		return data;
 	}
 }
