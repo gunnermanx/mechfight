@@ -17,6 +17,7 @@ public class PersistenceManager : MonoBehaviour {
 		WWW www = new WWW( PLAYER_JSON_WWW_PATH );
 		while ( !www.isDone ) {
 			// update some progress bar later
+			Debug.Log ( "Progress " + www.progress );
 		}
 	
 		if ( !string.IsNullOrEmpty( www.text ) ) {
