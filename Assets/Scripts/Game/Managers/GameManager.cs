@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void Start() {
+		Debug.Log ( "Initializing managers" );
+
 		InitializeManagers();
 
 		//TODO test
@@ -65,6 +67,9 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void LoadBattleScene() {
+
+		Debug.Log ( "Starting battle scene" );
+
 		Application.LoadLevel( "BattleScene" );
 
 

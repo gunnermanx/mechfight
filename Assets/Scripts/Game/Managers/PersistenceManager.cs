@@ -10,6 +10,9 @@ public class PersistenceManager : MonoBehaviour {
 	private readonly static string PLAYER_JSON_WWW_PATH = "file://" + Application.dataPath + "/TempPersistence/Player.json";
 
 	public PlayerSerializedData LoadPlayerData() {
+
+		Debug.Log ( "LoadPlayerData start" );
+
 		PlayerSerializedData playerData = null;
 		WWW www = new WWW( PLAYER_JSON_WWW_PATH );
 		while ( !www.isDone ) {
@@ -19,6 +22,8 @@ public class PersistenceManager : MonoBehaviour {
 		if ( !string.IsNullOrEmpty( www.text ) ) {
 			playerData = (PlayerSerializedData) Serializer.Deserialize( typeof(PlayerSerializedData), www.text );
 		}
+
+		Debug.Log ( "LoadPlayerData done!" );
 
 		return playerData;
 	}
