@@ -7,14 +7,14 @@ public class PersistenceManager : MonoBehaviour {
 	// FOR NOW NO NETWORK STUFF, STORED LOCALLY, 
 	//TODO HUGE TODO
 
-	private readonly static string PLAYER_JSON_WWW_PATH = "file://" + Application.dataPath + "/TempPersistence/Player.json";
-
 	public PlayerSerializedData LoadPlayerData() {
 
 		Debug.Log ( "LoadPlayerData start" );
 
+		string path = "file://" + Application.dataPath + "/TempPersistence/Player.json";
+
 		PlayerSerializedData playerData = null;
-		WWW www = new WWW( PLAYER_JSON_WWW_PATH );
+		WWW www = new WWW( path );
 		while ( !www.isDone ) {
 			// update some progress bar later
 			Debug.Log ( "Progress " + www.progress );
