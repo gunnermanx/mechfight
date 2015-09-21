@@ -1,0 +1,54 @@
+{
+	"_pilotCollection": {
+		"pilot01": {
+	        "_pilotId": "pilot01",
+	        "_pilotLevel": 3,
+	        "_pilotSkillIds": [
+	        	"pilot01_skill01",
+	        	"pilot01_skill02",	
+	        	"pilot01_skill03",
+	        	"pilot01_skill04"
+	        ]
+    	}
+	},
+	"_mechPartCollection": {
+		"mechpart_arms_01": 2,
+		"mechpart_core_01": 3,
+		"mechpart_legs_01": 1
+	},
+	"_units": [
+		{
+			"_pilotId": "pilot01",
+			"_mechPartIds":[
+				"mechpart_arms_01",
+				"mechpart_core_01",
+				"mechpart_generator_01",
+				"mechpart_head_01",
+				"mechpart_legs_01",
+				"mechpart_weapon_01"
+			]
+		},
+		{
+			"_pilotId": "pilot01",
+			"_mechPartIds":[
+				"mechpart_arms_01",
+				"mechpart_core_01",
+				"mechpart_generator_01",
+				"mechpart_head_01",
+				"mechpart_legs_01",
+				"mechpart_weapon_01"
+			]
+		},
+		{
+			"_pilotId": "pilot01",
+			"_mechPartIds":[
+				"mechpart_arms_01",
+				"mechpart_core_01",
+				"mechpart_generator_01",
+				"mechpart_head_01",
+				"mechpart_legs_01",
+				"mechpart_weapon_01"
+			]
+		}
+	]
+}

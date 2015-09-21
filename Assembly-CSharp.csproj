@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{D567668A-B151-214D-D71D-557316634A27}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_1_1;UNITY_5_1;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_LICENSE;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_EDITOR_METRICS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;ENABLE_LOCALIZATION;UNITY_IPHONE;ENABLE_RUNTIME_GI;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_NETWORK;UNITY_IPHONE_API;UNITY_IOS;ENABLE_TEXTUREID_MAP;PLAYERCONNECTION_LISTENS_FIXED_PORT;DEBUGGER_LISTENS_FIXED_PORT;ENABLE_IL2CPP;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Scripts\Core\Serializer.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\Unity\AnimationCurve_DirectConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\Unity\Bounds_DirectConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\Unity\Gradient_DirectConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\Unity\Keyframe_DirectConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\Unity\LayerMask_DirectConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\Unity\Rect_DirectConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\fsArrayConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\fsDateConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\fsDictionaryConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\fsEnumConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\fsForwardConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\fsGuidConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\fsIEnumerableConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\fsKeyValuePairConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\fsNullableConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\fsPrimitiveConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\fsReflectedConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\fsTypeConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Converters\fsWeakReferenceConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Internal\fsCyclicReferenceManager.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Internal\fsOption.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Internal\fsPortableReflection.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Internal\fsTypeExtensions.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Internal\fsVersionManager.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Internal\fsVersionedType.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Reflection\fsMetaProperty.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Reflection\fsMetaType.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Reflection\fsReflectionUtility.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\Reflection\fsTypeLookup.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsAotCompilationManager.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsBaseConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsConfig.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsContext.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsConverterRegistrar.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsData.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsDirectConverter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsExceptions.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsISerializationCallbacks.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsIgnoreAttribute.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsJsonParser.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsJsonPrinter.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsMemberSerialization.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsObjectAttribute.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsObjectProcessor.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsPropertyAttribute.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsResult.cs" />
+     <Compile Include="Assets\Scripts\Core\fullSerializer\fsSerializer.cs" />
+     <Compile Include="Assets\Scripts\Game\BattleSystem\BattleConductor\AIBattleConductor.cs" />
+     <Compile Include="Assets\Scripts\Game\BattleSystem\BattleConductor\BaseBattleConductor.cs" />
+     <Compile Include="Assets\Scripts\Game\BattleSystem\BattleConductor\InputBattleConductor.cs" />
+     <Compile Include="Assets\Scripts\Game\BattleSystem\BattleManagerSettings.cs" />
+     <Compile Include="Assets\Scripts\Game\BattleSystem\Battlefield.cs" />
+     <Compile Include="Assets\Scripts\Game\BattleSystem\BattlefieldSlot.cs" />
+     <Compile Include="Assets\Scripts\Game\BattleSystem\ConductorInput.cs" />
+     <Compile Include="Assets\Scripts\Game\BattleSystem\Database\Database.cs" />
+     <Compile Include="Assets\Scripts\Game\BattleSystem\Skill\SkillData.cs" />
+     <Compile Include="Assets\Scripts\Game\BattleSystem\Skill\SkillEffect\SkillEffect.cs" />
+     <Compile Include="Assets\Scripts\Game\BattleSystem\Skill\SkillEffect\SkillEffectData.cs" />
+     <Compile Include="Assets\Scripts\Game\Combatant\Mech\MechPart.cs" />
+     <Compile Include="Assets\Scripts\Game\Combatant\Mech\MechPartData.cs" />
+     <Compile Include="Assets\Scripts\Game\Combatant\Pilot\Pilot.cs" />
+     <Compile Include="Assets\Scripts\Game\Combatant\Pilot\PilotData.cs" />
+     <Compile Include="Assets\Scripts\Game\Combatant\Team.cs" />
+     <Compile Include="Assets\Scripts\Game\Combatant\Unit\Unit.cs" />
+     <Compile Include="Assets\Scripts\Game\Managers\BattleManager.cs" />
+     <Compile Include="Assets\Scripts\Game\Managers\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Game\Managers\PersistenceManager.cs" />
+     <Compile Include="Assets\Scripts\Game\Managers\PlayerDataManager.cs" />
+     <Compile Include="Assets\Scripts\Game\SerializedData\PilotSerializedData.cs" />
+     <Compile Include="Assets\Scripts\Game\SerializedData\PlayerSerializedData.cs" />
+     <Compile Include="Assets\Scripts\Game\SerializedData\UnitSerializedData.cs" />
+     <Compile Include="Assets\Scripts\Game\UI\BattleUI\BattleUI.cs" />
+     <Compile Include="Assets\Scripts\Game\UI\BattleUI\BattleUISkillButton.cs" />
+     <Compile Include="Assets\Scripts\Game\UI\BattleUI\TextPopup.cs" />
+     <Compile Include="Assets\Scripts\Game\UI\BattleUI\UnitStatus.cs" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
