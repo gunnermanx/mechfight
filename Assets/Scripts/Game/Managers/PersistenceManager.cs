@@ -1,39 +1,58 @@
 using UnityEngine;
 using System.Collections;
+using System.IO;
+using System;
 
 public class PersistenceManager : MonoBehaviour {
-
 
 	// FOR NOW NO NETWORK STUFF, STORED LOCALLY, 
 	//TODO HUGE TODO
 
-	public PlayerSerializedData LoadPlayerData() {
+	public delegate void PlayerDataLoadedDelegate( PlayerSerializedData data );
+
+	private WWW _fileWWW = null;
+	private PlayerDataLoadedDelegate _callback;
+
+	public void LoadPlayerData( PlayerDataLoadedDelegate playerDataLoadedCallback ) {
+		PlayerSerializedData playerData = null;
+		_callback = playerDataLoadedCallback;
+
+		StartCoroutine( LoadPlayerDataFile( playerData ) );
+	}
+
+	private IEnumerator LoadPlayerDataFile( PlayerSerializedData playerData ){
 
 		Debug.Log ( "LoadPlayerData start" );
 
-//		string path = "file://" + Application.dataPath + "/TempPersistence/Player.json";
-//
-//		PlayerSerializedData playerData = null;
-//		WWW www = new WWW( path );
-//		while ( !www.isDone ) {
-//			// update some progress bar later
-//			Debug.Log ( "Progress " + www.progress.ToString("0.00") );
-//		}
-//
-//		Debug.Log ( "Progress " + www.progress.ToString("0.00") );
-	
-		PlayerSerializedData playerData = null;
+		string playerDataText = null;
 
-		TextAsset textData = (TextAsset) Resources.Load("TempPersistence/Player");
-		string txt = textData.text;
-
-		if ( !string.IsNullOrEmpty( txt ) ) {
-			playerData = (PlayerSerializedData) Serializer.Deserialize( typeof(PlayerSerializedData), txt );
+		// loading from persistent data
+		string filePath = Application.persistentDataPath + "/Player.json";
+		if( File.Exists( filePath ) ) {
+			_fileWWW = new WWW( "file://" + filePath );
+			yield return _fileWWW;
+			if( _fileWWW.bytes.Length > 0 ){
+				playerDataText = _fileWWW.text;
+			}
+		}
+		// first time load
+		else {
+			TextAsset textData = (TextAsset) Resources.Load("TempPersistence/Player");
+			playerDataText = textData.text;
 		}
 
-		Debug.Log ( "LoadPlayerData done!" );
+		if ( !string.IsNullOrEmpty( playerDataText ) ) {
+			playerData = (PlayerSerializedData) Serializer.Deserialize( typeof(PlayerSerializedData), playerDataText );
+		}
 
-		return playerData;
+		_callback( playerData );
+
+		Debug.Log ( "LoadPlayerData done!" );
+	}
+
+	public void SavePlayerData() {
+		string playerDataText = Serializer.Serialize( typeof(PlayerSerializedData), GameManager.PlayerDataManager.PlayerData );
+		System.IO.File.WriteAllText( Application.persistentDataPath + "/Player.json", playerDataText );
 	}
 }
 

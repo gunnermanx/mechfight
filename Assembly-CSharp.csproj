@@ -123,6 +123,13 @@
      <Compile Include="Assets\Scripts\Game\UI\BattleUI\BattleUISkillButton.cs" />
      <Compile Include="Assets\Scripts\Game\UI\BattleUI\TextPopup.cs" />
      <Compile Include="Assets\Scripts\Game\UI\BattleUI\UnitStatus.cs" />
+     <Compile Include="Assets\Scripts\Game\UI\Hangar\Hangar.cs" />
+     <Compile Include="Assets\Scripts\Game\UI\Hangar\HangarInspector.cs" />
+     <Compile Include="Assets\Scripts\Game\UI\Hangar\HangarInventoryScrollView.cs" />
+     <Compile Include="Assets\Scripts\Game\UI\Hangar\HangarInventoryScrollViewItem.cs" />
+     <Compile Include="Assets\Scripts\Game\UI\Hangar\HangarUnitScrollView.cs" />
+     <Compile Include="Assets\Scripts\Game\UI\Hangar\HangarUnitScrollViewItem.cs" />
+     <Compile Include="Assets\Scripts\Game\UI\Hangar\PilotSkillItem.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

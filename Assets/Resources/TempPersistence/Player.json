@@ -1,54 +1,87 @@
 {
 	"_pilotCollection": {
-		"pilot01": {
-	        "_pilotId": "pilot01",
+		"GunnermanX": {
+	        "_pilotId": "GunnermanX",
 	        "_pilotLevel": 3,
 	        "_pilotSkillIds": [
-	        	"pilot01_skill01",
-	        	"pilot01_skill02",	
-	        	"pilot01_skill03",
-	        	"pilot01_skill04"
+	        	"Blast",
+	        	"Blast3",	
+	        	"Overclock",
+	        	"ChargeUp"
+	        ]
+    	},
+    	"Tea": {
+	        "_pilotId": "Tea",
+	        "_pilotLevel": 3,
+	        "_pilotSkillIds": [
+	        	"BombLob",
+	        	"Barrage",	
+	        	"Blast",
+	        	"ChargeUp"
+	        ]
+    	},
+    	"Cell": {
+	        "_pilotId": "Cell",
+	        "_pilotLevel": 3,
+	        "_pilotSkillIds": [
+	        	"Repair",
+	        	"Repair3",	
+	        	"ArmorUp",
+	        	"ChargeUp"
 	        ]
     	}
 	},
 	"_mechPartCollection": {
 		"mechpart_arms_01": 2,
+		"mechpart_arms_02": 2,
+		"mechpart_arms_03": 2,
 		"mechpart_core_01": 3,
-		"mechpart_legs_01": 1
+		"mechpart_core_02": 1,
+		"mechpart_core_03": 1,
+		"mechpart_core_04": 1,
+		"mechpart_legs_01": 1,
+		"mechpart_legs_02": 1,
+		"mechpart_legs_03": 1,
+		"mechpart_weapon_01": 1,
+		"mechpart_weapon_02": 1,
+		"mechpart_generator_01": 1,
+		"mechpart_generator_02": 1,
+		"mechpart_generator_03": 1,
+		"mechpart_head_01": 1,
+		"mechpart_head_02": 1,
+		"mechpart_head_03": 1,
+		"mechpart_head_04": 1,
 	},
 	"_units": [
 		{
-			"_pilotId": "pilot01",
-			"_mechPartIds":[
-				"mechpart_arms_01",
-				"mechpart_core_01",
-				"mechpart_generator_01",
-				"mechpart_head_01",
-				"mechpart_legs_01",
-				"mechpart_weapon_01"
-			]
+			"_unitName": "RX-78-2",
+			"_pilotId": "GunnermanX",
+			"_headMechPartId": "mechpart_head_01",
+			"_coreMechPartId": "mechpart_core_01",
+			"_armsMechPartId": "mechpart_arms_01",
+			"_legsMechPartId": "mechpart_legs_01",
+			"_weaponMechPartId": "mechpart_weapon_01",
+			"_generatorMechPartId": "mechpart_generator_01"
 		},
 		{
-			"_pilotId": "pilot01",
-			"_mechPartIds":[
-				"mechpart_arms_01",
-				"mechpart_core_01",
-				"mechpart_generator_01",
-				"mechpart_head_01",
-				"mechpart_legs_01",
-				"mechpart_weapon_01"
-			]
+			"_unitName": "GAT-X105",
+			"_pilotId": "Tea",
+			"_headMechPartId": "mechpart_head_01",
+			"_coreMechPartId": "mechpart_core_01",
+			"_armsMechPartId": "mechpart_arms_01",
+			"_legsMechPartId": "mechpart_legs_01",
+			"_weaponMechPartId": "mechpart_weapon_01",
+			"_generatorMechPartId": "mechpart_generator_01"
 		},
 		{
-			"_pilotId": "pilot01",
-			"_mechPartIds":[
-				"mechpart_arms_01",
-				"mechpart_core_01",
-				"mechpart_generator_01",
-				"mechpart_head_01",
-				"mechpart_legs_01",
-				"mechpart_weapon_01"
-			]
+			"_unitName": "GN-0000",
+			"_pilotId": "Cell",
+			"_headMechPartId": "mechpart_head_01",
+			"_coreMechPartId": "mechpart_core_01",
+			"_armsMechPartId": "mechpart_arms_01",
+			"_legsMechPartId": "mechpart_legs_01",
+			"_weaponMechPartId": "mechpart_weapon_01",
+			"_generatorMechPartId": "mechpart_generator_01"
 		}
 	]
 }

@@ -51,28 +51,24 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void Start() {
-		Debug.Log ( "Initializing managers" );
+		_persistenceManager.LoadPlayerData( OnPlayerDataLoaded );
+	}
 
-		InitializeManagers();
-
+	private void OnPlayerDataLoaded( PlayerSerializedData playerData ) {
+		_playerDataManager.Initialize( playerData );
 		//TODO test
-		LoadBattleScene();
+		LoadHangarScene();
+		//LoadBattleScene();
 	}
 
-	private void InitializeManagers() {
-		_playerDataManager.Initialize( _persistenceManager.LoadPlayerData() );
+	public void LoadHangarScene() {
+		Debug.Log ( "Starting hangar scene" );
+		Application.LoadLevel( "HangarScene" );
 	}
 
-	private void InitializeDatabases() {
-	}
-
-	private void LoadBattleScene() {
-
+	public void LoadBattleScene() {
 		Debug.Log ( "Starting battle scene" );
-
 		Application.LoadLevel( "BattleScene" );
-
-
 	}
 
 	private void OnLevelWasLoaded( int level ) {

@@ -28,5 +28,7 @@ public class MechPartData : ScriptableObject {
 	public int powerCharge = 0;
 
 	public int powerInitial = 0;
+
+	public Sprite icon = null;
 }
 

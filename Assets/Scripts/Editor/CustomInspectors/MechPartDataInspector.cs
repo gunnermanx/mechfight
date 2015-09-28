@@ -14,6 +14,7 @@ public class MechPartDataInspector : Editor {
 	private SerializedProperty _powerMaxProperty;
 	private SerializedProperty _powerChargeProperty;
 	private SerializedProperty _powerInitialProperty;
+	private SerializedProperty _iconProperty;
 
 	private MechPartData.PartType _lastPartTypeValue;
 
@@ -28,6 +29,7 @@ public class MechPartDataInspector : Editor {
 		_powerMaxProperty = serializedObject.FindProperty( "powerMax" );
 		_powerChargeProperty = serializedObject.FindProperty( "powerCharge" );
 		_powerInitialProperty = serializedObject.FindProperty( "powerInitial" );
+		_iconProperty = serializedObject.FindProperty( "icon" );
 
 		_lastPartTypeValue = ( MechPartData.PartType ) _partTypeProperty.enumValueIndex;
 	}
@@ -40,6 +42,7 @@ public class MechPartDataInspector : Editor {
 		EditorGUILayout.BeginVertical( "Box" );
 		{
 			EditorGUILayout.PropertyField( _partTypeProperty );
+			EditorGUILayout.PropertyField( _iconProperty );
 
 			// clear all values if part type changed
 			MechPartData.PartType newValue = ( MechPartData.PartType ) _partTypeProperty.enumValueIndex;

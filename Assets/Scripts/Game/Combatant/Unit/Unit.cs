@@ -7,7 +7,8 @@ public enum Stat {
 	HP,
 	SPEED,
 	POWER_MAX,
-	POWER_CHARGE
+	POWER_CHARGE,
+	NONE
 }
 
 public class Unit : MonoBehaviour {
@@ -42,10 +43,20 @@ public class Unit : MonoBehaviour {
 		_pilot = new Pilot( pilotSerializedData );
 
 		_mechParts.Clear();
-		for ( int i = 0, count = _serializedData._mechPartIds.Count; i < count; i++ ) {
-			MechPartData part = GameManager.Database.GetMechPartData( _serializedData._mechPartIds[ i ] );
-			_mechParts.Add( part );
-		}      
+
+		MechPartData part;
+		part = GameManager.Database.GetMechPartData( _serializedData._headMechPartId );
+		_mechParts.Add( part );
+		part = GameManager.Database.GetMechPartData( _serializedData._coreMechPartId );
+		_mechParts.Add( part );
+		part = GameManager.Database.GetMechPartData( _serializedData._armsMechPartId );
+		_mechParts.Add( part );
+		part = GameManager.Database.GetMechPartData( _serializedData._legsMechPartId );
+		_mechParts.Add( part );
+		part = GameManager.Database.GetMechPartData( _serializedData._weaponMechPartId );
+		_mechParts.Add( part );
+		part = GameManager.Database.GetMechPartData( _serializedData._generatorMechPartId );
+		_mechParts.Add( part );
 
 		InitializeStats();
 

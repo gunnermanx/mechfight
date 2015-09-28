@@ -4,8 +4,7 @@ using System.Collections.Generic;
 public class Database : MonoBehaviour {
 
 #region Path Constants
-	private const string SKILLDATA_PATH = "Data/ScriptableObjects/Pilots/";
-	private const string SKILLS_FOLDER = "/Skills/";
+	private const string SKILLDATA_PATH = "Data/ScriptableObjects/Skills/";
 
 	private const string PILOTDATA_PATH = "Data/ScriptableObjects/Pilots/";
 
@@ -18,11 +17,11 @@ public class Database : MonoBehaviour {
 	private Dictionary<string,MechPartData> _mechPartDatabase = new Dictionary<string, MechPartData>();
 #endregion
 	
-	public SkillData GetSkillData( string pilotId, string id ) {
+	public SkillData GetSkillData( string id ) {
 		SkillData data = null;
 		string path = null;
 		if ( !_skillDataSet.TryGetValue( id, out data ) ) {
-			path = SKILLDATA_PATH + pilotId + SKILLS_FOLDER + id;
+			path = SKILLDATA_PATH + id;
 			data = Resources.Load( path ) as SkillData;
 		}
 #if DEBUG		
@@ -49,7 +48,7 @@ public class Database : MonoBehaviour {
 		string path = null;
 		if ( !_pilotDataSet.TryGetValue( id, out data ) ) {
 			//TODO has science gone too far
-			path = PILOTDATA_PATH + id + "/" + id;
+			path = PILOTDATA_PATH + id;
 			data = Resources.Load( path ) as PilotData;
 		}
 #if DEBUG		

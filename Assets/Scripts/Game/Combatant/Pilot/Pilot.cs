@@ -14,7 +14,7 @@ public class Pilot {
 
 		for ( int i = 0, count = _serializedData._pilotSkillIds.Count; i < count; i++ ) {
 			string skillId = _serializedData._pilotSkillIds[i];
-			SkillData skillData = GameManager.Database.GetSkillData( _data.name, skillId );
+			SkillData skillData = GameManager.Database.GetSkillData( skillId );
 #if DEBUG
 			Debug.Assert( skillData != null, "Skill with id " + skillId + " does not exist!" );
 #endif
