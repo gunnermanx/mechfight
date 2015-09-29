@@ -106,9 +106,7 @@ public class BattleManager : MonoBehaviour {
 			_waitingForConductor = true;
 
 
-			// TODO: simulate some animation delay time, for clarity
-			// just for clarity, add a small delay for now ( to simulate thinking )
-			yield return new WaitForSeconds( 1f );
+
 
 
 			// Depending on the unit, either get input from the input conductor or the ai conductor
@@ -130,6 +128,10 @@ public class BattleManager : MonoBehaviour {
 			while( _waitingForConductor ) {
 				yield return null;
 			}
+
+			// TODO: simulate some animation delay time, for clarity
+			// just for clarity, add a small delay for now ( to simulate thinking )
+			yield return new WaitForSeconds( 1f );
 
 			unitToMove.UnitStatus.SetSelected( false );
 
